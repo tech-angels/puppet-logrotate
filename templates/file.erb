@@ -1,0 +1,51 @@
+# Managed by Puppet
+
+<%= log %> 
+{
+  <% if compress -%>compress<% else -%>nocompress<% end %>
+  <% if compresscmd %>compresscmd <%= compresscmd %><% end %>
+  <% if uncompresscmd %>uncompresscmd <%= uncompresscmd %><% end %>
+  <% if compressext %>compressext <%= compressext %><% end %>
+  <% if compressoptions %>compressoptions <%= compressoptions %><% end %>
+  <% if logcopy -%>copy<% else -%>nocopy<% end %>
+  <% if copytruncate -%>copytruncate<% else -%>nocopytruncate<% end %>
+  <% if create -%>create <%= create %><% else -%>nocreate<% end %>
+  <% if period %><%= period %><% end %>
+  <% if dateext -%>dateext<% else -%>nodateext<% end %>
+  <% if delaycompress -%>delaycompress<% else -%>nodelaycompress<% end %>
+  <% if extension %>extension <%= extension%><% end %>
+  <% if ifempty -%>ifempty<% else -%>notifempty<% end %>
+  <% if includefile %>include <%= includefile %><% end %>
+  <% if mail -%>mail <%= mail %><% else -%>nomail<% end %>
+  <% if mailfirst %>mailfirst<% end %>
+  <% if maillast %>maillast<% end %>
+  <% if maxage %>maxage <%= maxage %><% end %>
+  <% if minsize %>minsize <%= minsize %><% end %>
+  <% if missingok -%>missingok<% else -%>nomissingok<% end %>
+  <% if olddir %>olddir <%= olddir %><% end %>
+  <% if postrotate %>
+  postrotate
+    <%= postrotate %>
+  endscript
+  <% end %>
+  <% if prerotate %>
+  prerotate
+    <%= prerotate %>
+  endscript
+  <% end %>
+  <% if firstaction %>
+  firstaction
+    <%= firstaction %>
+  endscript
+  <% end %>
+  <% if lastaction %>
+  lastaction
+    <%= lastaction %>
+  endscript
+  <% end %>
+  <% if rotate %>rotate <%= rotate %><% end %>
+  <% if size %>size <%= size %><% end %>
+  <% if sharedscripts %>sharedscripts<% else %>nosharedscripts<% end %>
+  <% if start %>start <%= start %><% end %>
+  <% if tabooext %>tabooext <%= tabooext %><% end %>
+}
